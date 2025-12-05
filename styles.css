@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+}
+
+html,
+body {
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #6D6D52;
+}
+
+/* Asegura espacio al final para poder hacer scroll */
+body::after {
+  content: "";
+  display: block;
+  height: 0px;
+}
+
+/* Header */
+.header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 5px 10%;
+  position: relative;
+}
+
+.header .logo {
+  cursor: pointer;
+}
+
+.header .logo img {
+  height: 200px;
+  width: auto;
+  transition: all 0.3s;
+}
+
+.header .logo img:hover {
+  transform: scale(1.1);
+}
+
+.header .nav-links {
+  list-style: none;
+}
+
+.header .nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.header .nav-links li:hover {
+  transform: scale(1.1);
+}
+
+.header .nav-links a {
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+
+.header .nav-links li a:hover {
+  color: #ff0e0e;
+}
+
+.header .btn button {
+  font-weight: 700;
+  color: #00b3ff;
+  padding: 9px 25px;
+  background: #eceff1;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header .btn button:hover {
+  background-color: #e2f1f8;
+  color: #ff0e0e;
+  transform: scale(1.1);
+}
+
+/* Sección inicio */
+.inicio-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+  background: #6D6D52;
+  gap: 2rem;
+  flex-wrap: wrap;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inicio-content {
+  max-width: 500px;
+}
+
+.inicio-content h1 {
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: #222;
+}
+
+.inicio-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.inicio-content .btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #ff0e0e;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.inicio-content .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.inicio-image img {
+  max-width: 700px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(204, 0, 0, 0.1);
+}
+
+/* Sección contacto */
+.contacto-section {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-top: 230px;
+  position: static;
+  /* evita problemas de overlap con menú hamburguesa */
+
+}
+
+.contacto-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.contacto-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contacto-icons a {
+  font-size: 2.5rem;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contacto-icons a:hover {
+  color: #ff0e0e;
+  transform: scale(1.3);
+}
+
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Ocultar contacto duplicado en móvil */
+.mobile-contact {
+  display: none;
+}
+
+/* Layout general responsive */
+@media (max-width: 768px) {
+
+  .header .logo {
+    position: static;
+    /* evita problemas de overlap con menú hamburguesa */
+    margin: 0 auto;
+  }
+
+
+  .nav-links {
+    align-items: left;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    background-color: #fff;
+    width: 250px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    z-index: 999;
+    gap: 0.5rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .desktop-contact {
+    display: none;
+  }
+
+  .mobile-contact {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .header {
+    position: relative;
+    background-image: url("img/madera.png");
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center;
+    /* Centra la imagen */
+  }
+
+  .inicio-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .inicio-content h1 {
+    font-size: 2rem;
+  }
+
+  .inicio-content p {
+    font-size: 1rem;
+  }
+
+  .contacto-section {
+    padding: 30px 15px;
+    background-image: url("img/madera.png");
+    background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center;
+    /* Centra la imagen */
+
+  }
+
+  .contacto-section h2 {
+    font-size: 1.7em;
+  }
+
+  .contacto-icons a {
+    font-size: 2rem;
+  }
+}
+
+/* Caja de dudas y mapa */
+.box {
+  display: flex;
+  margin: 2rem;
+}
+
+.tienesdudas,
+.maps {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tienesdudas,
+  .maps {
+    width: 100%;
+  }
+
+  .maps {
+    margin: 1rem auto;
+    padding: 0 1rem;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+
+  .maps iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    display: block;
+  }
+
+  .box .tienesdudas+.tienesdudas h1 {
+    margin-top: 2rem;
+  }
+}
+
+.categorias {
+  display: grid;
+  justify-content: center;
+  /* centra horizontalmente */
+  grid-template-columns: repeat(2, 200px);
+  /* 2 columnas de 200px cada una */
+  grid-gap: 20px;
+  /* espacio entre las cards */
+  padding: 20px;
+}
+
+.card {
+  background-color: #e1e0d6;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;   /* Quita subrayado */
+  color: inherit;    
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .categorias {
+    margin-bottom: 2.5rem;
+    padding: 0 20px;
+    /* márgenes laterales */
+    justify-items: center;
+    /* centra las cards */
+  }
+
+  .card {
+    width: 90%;
+    max-width: 250px;
+    /* ancho máximo para que no sea gigante */
+  }
+}
+
+.reseñas {
+  background-color: #e1e0d6;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 1rem;
+}
