@@ -22,7 +22,7 @@
     <nav>
       <ul class="nav-links" id="nav-links">
         <li><a href="forest coffee/forest_coffee.html">Forest Coffee</a></li>
-        <li><a href="productos/index.html">Productos Gourmet</a></li>
+        <li><a href="/productos_gourmet/productos_gourmet.html">Productos Gourmet</a></li>
         <li><a href="productos/index.html">Complementos</a></li>
         <li><a href="productos/index.html">Catas y Experiencias</a></li>
         <li><a class="btn" href="contacto/index.html"><button>Contacto</button></a></li>
@@ -38,11 +38,11 @@
 
 
 
-
-  <section id="inicio" class="inicio-section">
     <div class="inicio-image">
       <img src="img/puerta.JPG" alt="entrada de la tienda de sabor maestro" />
     </div>
+  <section id="inicio" class="inicio-section">
+
     <div class="inicio-content">
       <p>Donde la Excelencia Gourmet y el Café de Especialidad se Fusionan</p>
     </div>
@@ -56,7 +56,7 @@
       <p>Forest Coffee</p>
   </a>
 
-  <a href="productos-gourmet.html" class="card">
+  <a href="/productos_gourmet/productos_gourmet.html" class="card">
       <img src="img/productos_gourmet.JPG" alt="Productos Gourmet">
       <p>Productos Gourmet</p>
   </a>
@@ -84,19 +84,66 @@
     </div>
   </section>
   
-  <section id="reseñas" class="reseñas">
-    <div class="reseña_fondo">
-      <div class="reseña_nombre">
-        <h1>Rut Gonzalez Gonzalez</h1>
-      </div>
+<section id="reseñas" class="carrusel">
+  <button class="flecha izquierda" onclick="moverCarrusel(-1)">&#10094;</button>
+
+  <div class="contenedor-carrusel">
+    
+    <!-- Reseña 1 -->
+    <div class="item">
+      <h1>Rut Gonzalez Gonzalez</h1>
       <div class="reseña_estrellas">
-      </div>
-      <div class="reseña_texto">
-        Local increíble para poder tomarse un buen café para llevar. Incluso puedes comprar el mismo café para hacértelo en casa,que te lo muelen en el momento.
-Además de un excelente asesoramiento en materia de café o de vino, es un servicio maravilloso y los que te atienden son increíblemente amables y profesionales!Encantada con el servicio! Gracias!
-      </div>
+  ★★★★★
+</div>
+
+      <p>Local increíble para poder tomarse un buen café para llevar. Incluso puedes comprar el mismo café para hacértelo en casa que te lo muelen en el momento. Además de un excelente asesoramiento en materia de café o de vino, es un servicio maravilloso y los que te atienden son increíblemente amables y profesionales!
+Encantada con el servicio! Gracias!</p>
     </div>
-  </section>
+
+    <!-- Reseña 2 -->
+    <div class="item">
+      <h1>Alejandro Lara</h1>
+      <div class="reseña_estrellas">
+  ★★★★★
+</div>
+
+      <p>Los mejores cafés y muy buena variedad de vinos, un servicio profesional y agradable, buen trato com el cliente y cercanía, recomiendo al 100%</p>
+    </div>
+
+    <!-- Reseña 3 -->
+    <div class="item">
+      <h1>Paola Bagliani</h1>
+      <div class="reseña_estrellas">
+  ★★★★★
+</div>
+
+      <p>Lugar super ameno, de gran belleza estética y con unos productos exclusivos: delicatessen, café de especialidad, molido en el acto. Puedes escoger tu vino, guiado magistralmente por Sebastián, prestigioso sommelier y reconocido barista. Ideal para una copa o un café delicioso take away!!</p>
+    </div>
+
+    <!-- Reseña 4 -->
+    <div class="item">
+      <h1>WILL Diaz</h1>
+      <div class="reseña_estrellas">
+  ★★★★★
+</div>
+
+      <p>Muy buen café natural, recomendado!se siente la diferencia en el tostado y el sabor.</p>
+    </div>
+
+    <!-- Reseña 5 -->
+    <div class="item">
+      <h1>Paco Miralles</h1>
+      <div class="reseña_estrellas">
+  ★★★★★
+</div>
+
+      <p>El mejor lugar para llevarte un café de especialidad. Se ha convertido en mi tienda habitual.</p>
+    </div>
+
+  </div>
+
+  <button class="flecha derecha" onclick="moverCarrusel(1)">&#10095;</button>
+</section>
 
 
   <section id="horarios" class="horarios" style="margin-top: 8rem;">
@@ -144,6 +191,24 @@ Además de un excelente asesoramiento en materia de café o de vino, es un servi
       </a>
     </div>
   </section>
+
+  <script>
+let indice = 0;
+
+function moverCarrusel(direccion) {
+  const carrusel = document.querySelector(".contenedor-carrusel");
+  const items = document.querySelectorAll(".item");
+  const total = items.length;
+
+  indice += direccion;
+
+  if (indice < 0) indice = total - 1;
+  if (indice >= total) indice = 0;
+
+  carrusel.style.transform = `translateX(-${indice * 100}%)`;
+}
+</script>
+
 
   <script>
     const hamburger = document.getElementById('hamburger');
