@@ -151,7 +151,7 @@ background-color: rgba(255, 255, 255, .7);
 
   .header {
     position: relative;
-    background-image: url("/img/madera.png");
+    background-image: url("../img/madera.png");
     background-repeat: no-repeat;
     /* Evita que la imagen se repita */
     background-size: cover;
