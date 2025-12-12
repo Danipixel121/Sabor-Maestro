@@ -26,6 +26,13 @@ body::after {
 
 /* Header */
 .header {
+ background-image: url("../img/madera_grande.jpg");
+       background-repeat: no-repeat;
+    /* Evita que la imagen se repita */
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center;
+    /* Centra la imagen */
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -170,17 +177,15 @@ background-color: rgba(255, 255, 255, .7);
     margin-top: 2rem;
   }
 
- .contacto-section {
-    padding: 30px 15px;
-    background-image: url("../img/madera.png");
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-size: cover;
-    /* Ajusta la imagen para cubrir todo el contenedor */
-    background-position: center;
-    /* Centra la imagen */
 
+  .contacto-section {
+    padding: 30px 15px;
+    background-image: url("../img/madera.png") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
+
 
   .contacto-section h2 {
     font-size: 1.7em;
@@ -193,6 +198,7 @@ background-color: rgba(255, 255, 255, .7);
 
 /* Sección contacto */
 .contacto-section {
+  background-image: url("../img/madera_grande.jpg");
   padding: 40px 20px;
   background-color: #f5f5f5;
   text-align: center;

@@ -17,7 +17,6 @@ body {
   background-color: #6D6D52;
 }
 
-
 /* Asegura espacio al final para poder hacer scroll */
 body::after {
   content: "";
@@ -206,7 +205,7 @@ background-color: rgba(255, 255, 255, .7);
   display: block;
   position: relative;
   z-index: 1;
-  margin-top: 50px;
+  margin-top: 230px;
   position: static;
   /* evita problemas de overlap con menú hamburguesa */
 
@@ -244,32 +243,31 @@ background-color: rgba(255, 255, 255, .7);
   box-shadow: 0 4px 10px rgba(204, 0, 0, 0.1);
 }
 
-
-
 .card {
-  width: 220px;
-  background-color: #e1e0d6;
+  width: 300px;                /* Más grande que antes */
   border-radius: 15px;
   overflow: hidden;
   text-align: center;
-  padding: 10px;
+  padding: 15px;               /* Un poco más de espacio */
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-  margin: 1rem; /* IMPORTANTE: elimina márgenes que descuadran */
-
+  margin: 1rem;
 }
 
 .card img {
-  align-items: center;
-  height: 250px;       /* evita que sean muy grandes */
-  object-fit: cover;   /* mantiene proporciones */
+  display: block;              /* Hace que se pueda centrar */
+  margin: 0 auto;              /* Centra la imagen horizontalmente */
+  height: 300px;               /* Más grande que antes */
+  width: 100%;                 /* Mantiene proporciones */
+  object-fit: cover;
+  border-radius: 10px;         /* Opcional: bordes redondeados en la imagen */
 }
 
-.cafes {
+.cata {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;  /* Centra horizontalmente */
-  align-items: center;       /* Centra verticalmente si es necesario */
-  gap: 2rem;                 /* Separación entre cards */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
   width: 100%;
 }
