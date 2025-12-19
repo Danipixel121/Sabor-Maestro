@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sabor Maestro-Forest Coffee</title>
+  <title>Forest Coffee | Sabor Maestro</title>
   <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="forest_coffee.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 </head>
 
 <body>
   <header class="header">
     <div class="logo">
-      <a href="../index.html">
-        <img src="../img/icon.png" alt="Logo de la marca" />
-      </a>
+      <a href="../index.html"><img src="../img/icon.png" alt="Logo Sabor Maestro" /></a>
     </div>
     <nav>
       <ul class="nav-links" id="nav-links">
@@ -26,93 +22,96 @@
         <li><a href="../catas/catas.html">Catas y Experiencias</a></li>
       </ul>
     </nav>
-
-    <div class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
-    </div>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
   </header>
 
-
-
-  <div class="inicio-image">
-    <img src="../img/cafe.JPG" alt="café de la tienda de sabor maestro" />
-  </div>
-  <section id="inicio" class="inicio-section">
-
-    <div class="inicio-content">
-      <h1>Forest Coffee — Café de especialidad artesanal</h1>
-      <p>En Forest Coffee, cada taza cuenta una historia. Desde la selección de granos hasta el tostado, cada paso está
-        cuidado por manos expertas y dedicadas</p>
-      <p>Somos una microtostadora de café de especialidad en Vigo. Lo que hace nuestro café único es que lo tuesta y
-        sirve la misma persona: nuestro barista campeón regional y nacional, con más de 10 años de experiencia en el
-        mundo del café. Cada café que servimos refleja nuestra pasión, nuestra excelencia y nuestro compromiso: creemos
-        que todo trabajo, hecho con dedicación, es un acto de servicio</p>
-    </div>
-    <div class="inicio-image" style="margin-top: 3rem;">
-      <img src="../img/cafes-especialidad.jpg" alt="cafés especialidad de la tienda de sabor maestro" />
-    </div>
-    <div class="inicio-content">
-      <p>Compra un café sincero. No porque esté de moda, sino porque es realmente bueno. Cada taza es el resultado de
-        años de aprendizaje, catas, control de calidad y amor por el café</p>
-      <p>Descubre nuestra selección de cafés, cada uno con su propia personalidad y aroma</p>
-    </div>
-</section>
-
-
-
-    <section class="cafes">
-            <div class="card">
-        <img src="../img/cafe5.JPG" alt="café tradicional">
-        <p>El clásico de toda la vida, con aroma cálido y redondez en el sabor. Un café honesto, perfecto para cualquier ocasión</p>
-      </div>
-
-      <div class="card">
-        <img src="../img/cafe1.JPG" alt="café exótico">
-        <p>Un café que te transporta a lugares lejanos. Con notas frutales y aromas sorprendentes, ideal para quienes buscan experiencias diferentes en cada sorbo.</p>
-      </div>
-
-      <div class="card">
-        <img src="../img/cafe2.JPG" alt="café cítrico">
-        <p>Fresco y vibrante, con delicados matices cítricos que despiertan tus sentidos. Perfecto para empezar el día con energía y ligereza.</p>
-      </div>
-
-      <div class="card">
-        <img src="../img/cafe3.JPG" alt="café dulce">
-        <p>Dulce, suave y equilibrado. Un café que acaricia el paladar y se disfruta lentamente, ideal para momentos de tranquilidad.</p>
-      </div>
-
-      <div class="card">
-        <img src="../img/cafe4.JPG" alt="café fuerte">
-        <p>Intenso y potente, con cuerpo y carácter. Para los amantes de un café con presencia y sabor que perdura.</p>
+  <main>
+    <section class="hero-forest">
+      <div class="hero-overlay">
+        <h1>Forest Coffee</h1>
+        <p>Café de especialidad tostado artesanalmente en Vigo</p>
       </div>
     </section>
 
-
-
-
-
-
-    <section id="contacto" class="contacto-section">
-      <h2>Contáctanos</h2>
-      <div class="contacto-icons">
-        <a href="" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="" target="_blank" rel="noopener">
-          <i class="fas fa-envelope"></i>
-        </a>
+    <section class="split-section">
+      <div class="split-image">
+        <img src="../img/cafes-especialidad.jpg" alt="Nuestro Barista">
+      </div>
+      <div class="split-text">
+        <span class="subtitle">Nuestra Esencia</span>
+        <h2>Cada taza cuenta una historia</h2>
+        <p>Somos una microtostadora donde lo que hace nuestro café único es la trazabilidad absoluta. Nuestro barista, campeón nacional con más de 10 años de experiencia, supervisa cada tueste.</p>
+        <p>Creemos que el café de especialidad no es una moda, sino un acto de servicio y dedicación.</p>
       </div>
     </section>
 
+    <section class="nuestros-cafes">
+      <div class="section-title">
+        <h2>Nuestra Selección</h2>
+        <p>Granos seleccionados por su perfil sensorial único</p>
+      </div>
+      
+      <div class="cafes-grid">
+        <div class="cafe-card">
+          <div class="cafe-img-container">
+            <img src="../img/cafe5.JPG" alt="Café Tradicional">
+          </div>
+          <div class="cafe-info">
+            <h3>El Tradicional</h3>
+            <p>Aroma cálido y redondez. Un café honesto, perfecto para cualquier ocasión.</p>
+          </div>
+        </div>
 
-    <script>
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.getElementById('nav-links');
+        <div class="cafe-card">
+          <div class="cafe-img-container">
+            <img src="../img/cafe1.JPG" alt="Café Exótico">
+          </div>
+          <div class="cafe-info">
+            <h3>Exótico Floral</h3>
+            <p>Notas frutales y aromas sorprendentes para paladares aventureros.</p>
+          </div>
+        </div>
 
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-    </script>
+        <div class="cafe-card">
+          <div class="cafe-img-container">
+            <img src="../img/cafe2.JPG" alt="Café Cítrico">
+          </div>
+          <div class="cafe-info">
+            <h3>Vibrante Cítrico</h3>
+            <p>Fresco y energético, con matices que despiertan los sentidos.</p>
+          </div>
+        </div>
+
+        <div class="cafe-card">
+          <div class="cafe-img-container">
+            <img src="../img/cafe3.JPG" alt="Café Dulce">
+          </div>
+          <div class="cafe-info">
+            <h3>Dulce Equilibrio</h3>
+            <p>Suave y meloso, ideal para esos momentos de paz necesarios.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto" class="contacto-section">
+    <h2>¿Quieres probarlo en casa?</h2>
+    <p>Visítanos en Vigo o contáctanos para pedidos</p>
+    <div class="contacto-icons">
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fas fa-envelope"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
-
 </html>

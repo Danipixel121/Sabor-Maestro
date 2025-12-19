@@ -1,60 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+:root {
+  --verde: #6D6D52;
+  --crema: #e1e0d6;
+  --blanco: #ffffff;
+  --oscuro: #2c2c24;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Nunito', sans-serif;
-  font-size: 20px;
 }
 
-html,
 body {
-  height: auto;
-  min-height: 100vh;
+  background-color: var(--verde);
   overflow-x: hidden;
-  overflow-y: auto;
-  background-color: #6D6D52;
 }
 
-/* Asegura espacio al final para poder hacer scroll */
-body::after {
-  content: "";
-  display: block;
-  height: 0px;
-}
-
-
-/* Header */
+/* =========================================
+   HEADER UNIFICADO ESTILO LIMPIO
+   ========================================= */
 .header {
-      background-image: url("img/madera_grande.jpg");
-       background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-size: cover;
-    /* Ajusta la imagen para cubrir todo el contenedor */
-    background-position: center;
-    /* Centra la imagen */
-  background-color: #ffffff;
+  background-image: url("../img/madera_grande.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90px;
+  /* Altura unificada */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 85px;
-  padding: 5px 10%;
-  position: relative;
-}
-
-.header .logo {
-  cursor: pointer;
+  padding: 0 10%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header .logo img {
-  height: 200px;
+  height: 180px;
+  /* Tamaño más uniforme */
   width: auto;
-  transition: all 0.3s;
+  transition: transform 0.3s;
 }
 
 .header .logo img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .header .nav-links {
@@ -66,400 +57,377 @@ body::after {
   padding: 0 20px;
 }
 
-.header .nav-links li:hover {
-  transform: scale(1.1);
-}
-
 .header .nav-links a {
   font-weight: 700;
-  color: #000000;
+  color: black;
   text-decoration: none;
+  font-size: 20px;
 }
 
 .header .nav-links li a:hover {
-  color: #6D6D52;
+  color: var(--verde);
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
-.header .btn button {
-  font-weight: 700;
-  color: #00b3ff;
-  padding: 9px 25px;
-  background: #eceff1;
-  border: none;
-  border-radius: 50px;
+/* Hamburguesa móvil */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  color: black;
 }
 
-.header .btn button:hover {
-  background-color: #e2f1f8;
-  color: #6D6D52;
-  transform: scale(1.1);
+/* Split Hero (PC) */
+.split-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+  background-color: var(--verde);
 }
 
-/* Sección inicio */
-.inicio-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 4rem 2rem;
-  background: #6D6D52;
-  gap: 2rem;
-  flex-wrap: wrap;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.inicio-content {
-  max-width: 500px;
-}
-
-.inicio-content h1 {
-  font-size: 2.5rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  color: #222;
-}
-
-.inicio-content p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #000000;
-  margin-bottom: 2rem;
-  text-align: left;
-}
-
-.inicio-content .btn-primary {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #6D6D52;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
-
-.inicio-content .btn-primary:hover {
-  background-color: #0056b3;
-}
-
-.inicio-image img {
-  max-width: 700px;
+.split-image img {
   width: 100%;
-  border-radius: 0px;
-  box-shadow: 0 4px 10px rgba(204, 0, 0, 0.1);
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Sección contacto */
+.split-text {
+  padding: 10%;
+  color: var(--blanco);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.highlight {
+  font-style: italic;
+  color: var(--crema);
+}
+
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.split-text h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.split-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Categorías Boutique */
+.categorias-container {
+  padding: 5rem 10%;
+  background-color: var(--crema);
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  color: var(--oscuro);
+  margin-bottom: 3rem;
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.cat-card {
+  background: var(--blanco);
+  padding: 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--oscuro);
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cat-card .img-box {
+  height: 180px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.cat-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cat-card p {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Carrusel y Horarios */
+.carrusel-section {
+  padding: 4rem 10%;
+}
+
+.item {
+  background: var(--blanco);
+  color: var(--oscuro);
+  padding: 3rem;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.horarios-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 5rem 10%;
+  background: var(--blanco);
+  align-items: center;
+}
+
+.info-card h2 {
+  font-size: 2.5rem;
+  color: var(--verde);
+  margin-bottom: 1.5rem;
+}
+
+.horarios-info p {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+/* Footer */
 .contacto-section {
   background-image: url("img/madera_grande.jpg");
-  padding: 40px 20px;
-  background-color: #f5f5f5;
+  background-size: cover;
+  padding: 60px 20px;
   text-align: center;
-  display: block;
-  position: relative;
-  z-index: 1;
-  margin-top: 50px;
-  position: static;
-  /* evita problemas de overlap con menú hamburguesa */
-
-}
-
-.contacto-section h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.contacto-icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 20px;
 }
 
 .contacto-icons a {
   font-size: 2.5rem;
-  color: #333;
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: black;
+  margin: 0 15px;
+  transition: 0.3s;
 }
 
 .contacto-icons a:hover {
-  color: #6D6D52;
-  transform: scale(1.3);
+  color: var(--verde);
+  transform: scale(1.2);
 }
 
-/* Botón hamburguesa */
-.hamburger {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: #000;
-}
-
-/* Ocultar contacto duplicado en móvil */
-.mobile-contact {
-  display: none;
-}
-
-/* Layout general responsive */
+/* Responsive */
 @media (max-width: 768px) {
-
-  .header .logo {
-    position: static;
-    /* evita problemas de overlap con menú hamburguesa */
-    margin: 0 auto;
+  .split-hero {
+    grid-template-columns: 1fr;
   }
 
+  .split-text h1 {
+    font-size: 2.5rem;
+  }
 
-  .nav-links {
-    align-items: left;
+  .horarios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header .nav-links {
+    display: none;
     flex-direction: column;
     position: absolute;
-    top: 85px;
+    top: 90px;
     right: 0;
-background-color: rgba(255, 255, 255, .7);
     width: 250px;
-    display: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 0.5rem;
-    z-index: 999;
-    gap: 2rem;
-    height: 40rem;
-    font-weight: bold; /* letra gorda */
-  color: black;      /* letra negra */
+    background: rgba(255, 255, 255, 0.98);
+    padding: 2rem;
   }
 
-  .nav-links a {
-    margin-top: 1rem;
-  display: block;      /* hace que el padding funcione en todo el enlace */
-  padding: .2rem;       /* margen interno */
-  font-weight: bold;   /* letra gorda */
-  color: black;        /* letra negra */
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-  .nav-links.active {
+  .header .nav-links.active {
     display: flex;
   }
 
   .hamburger {
     display: block;
-  }
-
-  .desktop-contact {
-    display: none;
-  }
-
-  .mobile-contact {
-    display: block;
-    margin-top: 10px;
-  }
-
-  .header {
-    position: relative;
-    background-image: url("img/madera.png");
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-size: cover;
-    /* Ajusta la imagen para cubrir todo el contenedor */
-    background-position: center;
-    /* Centra la imagen */
-  }
-
-  .inicio-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  .inicio-content h1 {
-    font-size: 2rem;
-  }
-
-  .inicio-content p {
-    font-size: 1rem;
-  }
-
-  .contacto-section {
-    padding: 30px 15px;
-    background-image: url("img/madera.png");
-    background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
-    background-size: cover;
-    /* Ajusta la imagen para cubrir todo el contenedor */
-    background-position: center;
-    /* Centra la imagen */
-
-  }
-
-  .contacto-section h2 {
-    font-size: 1.7em;
-  }
-
-  .contacto-icons a {
-    font-size: 2rem;
-  }
-}
-
-/* Caja de dudas y mapa */
-.box {
-  display: flex;
-  margin: 2rem;
-}
-
-.tienesdudas,
-.maps {
-  width: 50%;
-}
-
-@media (max-width: 768px) {
-  .box {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .tienesdudas,
-  .maps {
-    width: 100%;
-  }
-
-  .maps {
-    margin: 1rem auto;
-    padding: 0 1rem;
-    max-width: 400px;
-    box-sizing: border-box;
-  }
-
-  .maps iframe {
-    width: 100%;
-    height: 300px;
-    border: 0;
-    display: block;
-  }
-
-  .box .tienesdudas+.tienesdudas h1 {
-    margin-top: 2rem;
-  }
-}
-
-.categorias {
-  display: grid;
-  justify-content: center;
-  /* centra horizontalmente */
-  grid-template-columns: repeat(2, 180px);
-  /* 2 columnas de 200px cada una */
-  grid-gap: 20px;
-  /* espacio entre las cards */
-  padding: 20px;
-}
-
-.card {
-  background-color: #e1e0d6;
-  border-radius: 15px;
-  overflow: hidden;
-  text-align: center;
-  padding: 10px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-    text-decoration: none;   /* Quita subrayado */
-  color: inherit;    
-}
-
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  height: 150px;
-  object-fit: cover;
-}
-
-.card p {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* Ajustes para móviles */
-@media (max-width: 768px) {
-  .categorias {
-    margin-bottom: 2.5rem;
-    padding: 0 20px;
-    /* márgenes laterales */
-    justify-items: center;
-    /* centra las cards */
-  }
-
-  .card {
-    width: 90%;
-    max-width: 250px;
-    /* ancho máximo para que no sea gigante */
+    font-size: 1.8rem;
+    cursor: pointer;
   }
 }
 
 .reseñas {
+
   background-color: #e1e0d6;
+
   border-radius: 15px;
+
   padding: 1rem;
+
   margin: 1rem;
+
+
+
 }
+
 .carrusel {
+
   position: relative;
-  width: 90%;
+
+  width: 70%;
+
   margin: auto;
+
   overflow: hidden;
+
 }
+
+
 
 .contenedor-carrusel {
+
   display: flex;
+
   transition: transform 0.4s ease;
+
 }
+
+
 
 .item {
+
   min-width: 100%;
+
   box-sizing: border-box;
+
   padding: 20px;
+
   background: #f8f8f8;
+
   border-radius: 10px;
+
   margin: 0px;
-  
+
+
+
+
+
 }
+
 .flecha {
+
   position: absolute;
+
   top: 50%;
+
   transform: translateY(-50%);
-  width: 45px;          /* mismo ancho */
-  height: 45px;         /* mismo alto -> círculo perfecto */
+
+  width: 45px;
+  /* mismo ancho */
+
+  height: 45px;
+  /* mismo alto -> círculo perfecto */
+
   background: rgba(0, 0, 0, 0.7);
+
   color: white;
+
   border: none;
+
   cursor: pointer;
+
   font-size: 24px;
 
-  display: flex;        /* centra la flecha */
+
+
+  display: flex;
+  /* centra la flecha */
+
   justify-content: center;
+
   align-items: center;
 
-  border-radius: 50%;   /* círculo perfecto */
-  z-index: 10;          /* que pase encima del texto */
+
+
+  border-radius: 50%;
+  /* círculo perfecto */
+
+  z-index: 10;
+  /* que pase encima del texto */
+
 }
+
+
 
 .flecha.izquierda {
+
   left: 10px;
+
 }
+
+
 
 .flecha.derecha {
+
   right: 10px;
+
 }
+
+
 
 .flecha:hover {
-  background: rgba(0,0,0,0.8);
+
+  background: rgba(0, 0, 0, 0.8);
+
 }
+
+
 
 .reseña_estrellas {
-  color: #f4c430;       /* amarillo tipo estrella */
-  font-size: 22px;
-  margin: 5px 0 10px 0;
-  letter-spacing: 2px;  /* espacio entre estrellas */
-}
 
+  color: #f4c430;
+  /* amarillo tipo estrella */
+
+  font-size: 22px;
+
+  margin: 5px 0 10px 0;
+
+  letter-spacing: 2px;
+  /* espacio entre estrellas */
+
+}
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 85px; right: 0; width: 250px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    height: 40rem;
+    gap: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active { display: flex; }
+  
+  .nav-links a { color: black; font-size: 1.2rem; display: block; }
+
+  .hamburger { display: block; font-size: 1.8rem; cursor: pointer; color: black; }
+
+  .split-section { grid-template-columns: 1fr; }
+  .hero-forest h1 { font-size: 2.2rem; }
+}

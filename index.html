@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <title>Sabor Maestro</title>
+  <meta name="description" content="Sabor Maestro - Café de especialidad y productos gourmet en Vigo.">
+  <title>Sabor Maestro | Café de Especialidad</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,7 +14,7 @@
   <header class="header">
     <div class="logo">
       <a href="index.html">
-        <img src="img/icon.png" alt="Logo de la marca" />
+        <img src="img/icon.png" alt="Logo de Sabor Maestro" />
       </a>
     </div>
     <nav>
@@ -27,197 +25,119 @@
         <li><a href="catas/catas.html">Catas y Experiencias</a></li>
       </ul>
     </nav>
-
-    <div class="hamburger" id="hamburger">
-      <i class="fas fa-bars"></i>
-    </div>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
   </header>
 
+  <main>
+    <section class="split-hero">
+      <div class="split-image">
+        <img src="img/puerta.JPG" alt="Entrada Sabor Maestro">
+      </div>
+      <div class="split-text">
+        <span class="subtitle">Bienvenido a Vigo</span>
+        <h1>Nuestro Café,<br><span class="highlight">Nuestra Pasión</span></h1>
+        <p>En <strong>Sabor Maestro</strong> trabajamos con Forest Coffee, una microtostadora de especialidad donde el café se tuesta de forma artesanal para preservar cada matiz.</p>
+        <p>Sebarista y su equipo seleccionan cada producto gourmet: vinos singulares, chocolates premium y tés de origen para una experiencia auténtica.</p>
+      </div>
+    </section>
 
+    <section id="categorias" class="categorias-container">
+      <div class="section-title">
+        <h2>Explora nuestra tienda</h2>
+      </div>
+      <div class="categorias-grid">
+        <a href="forest coffee/forest_coffee.html" class="cat-card">
+          <div class="img-box"><img src="img/cafe.JPG" alt="Forest Coffee"></div>
+          <p>Forest Coffee</p>
+        </a>
+        <a href="productos_gourmet/productos_gourmet.html" class="cat-card">
+          <div class="img-box"><img src="img/productos_gourmet.JPG" alt="Productos Gourmet"></div>
+          <p>Productos Gourmet</p>
+        </a>
+        <a href="complementos/complementos.html" class="cat-card">
+          <div class="img-box"><img src="img/complementos.JPG" alt="Complementos"></div>
+          <p>Complementos</p>
+        </a>
+        <a href="catas/catas.html" class="cat-card">
+          <div class="img-box"><img src="img/vinos.jpg" alt="Catas y Experiencias"></div>
+          <p>Catas y Experiencias</p>
+        </a>
+      </div>
+    </section>
 
-
-
-    <div class="inicio-image">
-      <img src="img/puerta.JPG" alt="entrada de la tienda de sabor maestro" />
-    </div>
-  <section id="inicio" class="inicio-section">
-
-    <div class="inicio-content">
-      <p>Donde la Excelencia Gourmet y el Café de Especialidad se Fusionan</p>
-    </div>
-  </section>
-
-
-
-  <section id="categorias" class="categorias">
-  <a href="forest coffee/forest_coffee.html" class="card">
-      <img src="img/cafe.JPG" alt="Forest Coffee">
-      <p>Forest Coffee</p>
-  </a>
-
-  <a href="productos_gourmet/productos_gourmet.html" class="card">
-      <img src="img/productos_gourmet.JPG" alt="Productos Gourmet">
-      <p>Productos Gourmet</p>
-  </a>
-
-  <a href="/complementos/complementos.html" class="card">
-      <img src="img/complementos.JPG" alt="Complementos">
-      <p>Complementos</p>
-  </a>
-
-  <a href="/catas/catas.html" class="card">
-      <img src="img/vinos.jpg" alt="Catas y Experiencias">
-      <p>Catas y Experiencias</p>
-  </a>
-</section>
-
-
-  <section id="inicio" class="inicio-section">
-    <div class="inicio-content">
-      <h1 style="text-align: left;">Nuestro Café,<br>Nuestra Pasión</h1>
-      <div class="inicio-image">
-      <img src="img/cafes-especialidad.jpg" alt="cafés de especialidad" />
-    </div>
-      <p>En Sabor Maestro trabajamos con Forest Coffee, una microtostadora de especialidad en Vigo donde el café se tuesta de forma artesanal por el mismo barista que te lo sirve.
- Sebarista y su equipo —profesionales del café con más de 10 años de experiencia y premios nacionales— seleccionan cada producto gourmet para que vivas una experiencia auténtica: cafés únicos, vinos singulares, chocolates, tés y mucho más.</p>
-    </div>
-  </section>
-  
-<section id="reseñas" class="carrusel">
-  <button class="flecha izquierda" onclick="moverCarrusel(-1)">&#10094;</button>
-
-  <div class="contenedor-carrusel">
-    
-    <!-- Reseña 1 -->
-    <div class="item">
-      <h1>Rut Gonzalez Gonzalez</h1>
-      <div class="reseña_estrellas">
-  ★★★★★
-</div>
-
-      <p>Local increíble para poder tomarse un buen café para llevar. Incluso puedes comprar el mismo café para hacértelo en casa que te lo muelen en el momento. Además de un excelente asesoramiento en materia de café o de vino, es un servicio maravilloso y los que te atienden son increíblemente amables y profesionales!
+    <section id="reseñas" class="carrusel-section">
+      <div class="carrusel">
+        <button class="flecha izquierda" onclick="moverCarrusel(-1)">❮</button>
+        <div class="contenedor-carrusel">
+          <div class="item">
+            <h1>Rut Gonzalez</h1>
+            <div class="reseña_estrellas">★★★★★</div>
+            <p>Local increíble para poder tomarse un buen café para llevar. Incluso puedes comprar el mismo café para hacértelo en casa que te lo muelen en el momento. Además de un excelente asesoramiento en materia de café o de vino, es un servicio maravilloso y los que te atienden son increíblemente amables y profesionales!
 Encantada con el servicio! Gracias!</p>
-    </div>
+          </div>
+          <div class="item">
+            <h1>Paola Bagliani</h1>
+            <div class="reseña_estrellas">★★★★★</div>
+            <p>Lugar super ameno, de gran belleza estética y con unos productos exclusivos: delicatessen, café de especialidad, molido en el acto. Puedes escoger tu vino, guiado magistralmente por Sebastián, prestigioso sommelier y reconocido barista. Ideal para una copa o un café delicioso take away!!</p>
+          </div>
+          <div class="item">
+            <h1>Paco Miralles</h1>
+            <div class="reseña_estrellas">★★★★★</div>
+            <p>El mejor lugar para llevarte un café de especialidad. Se ha convertido en mi tienda habitual</p>
+          </div>
+          <div class="item">
+            <h1>Alejandro Lara</h1>
+            <div class="reseña_estrellas">★★★★★</div>
+            <p>Los mejores cafés y muy buena variedad de vinos, un servicio profesional y agradable, buen trato com el cliente y cercanía, recomiendo al 100%</p>
+          </div>
+          <div class="item">
+            <h1>Will Diaz</h1>
+            <div class="reseña_estrellas">★★★★★</div>
+            <p>"Muy buen café natural, recomendado!se siente la diferencia en el tostado y el sabor"</p>
+          </div>
+        </div>
+        <button class="flecha derecha" onclick="moverCarrusel(1)">❯</button>
+      </div>
+    </section>
 
-    <!-- Reseña 2 -->
-    <div class="item">
-      <h1>Alejandro Lara</h1>
-      <div class="reseña_estrellas">
-  ★★★★★
-</div>
+    <section id="horarios" class="horarios-grid">
+      <div class="info-card">
+        <h2>Visítanos</h2>
+        <div class="horarios-info">
+          <p><strong>🕒 Lun a Vie:</strong> 8:30-14:00 | 17:00-20:30</p>
+          <p><strong>🕒 Sábados:</strong> 9:30-14:00 | 17:30-20:30</p>
+          <p><strong>📍 Ubicación:</strong> Rúa do Marqués de Valladares, 3, Vigo</p>
+          <p><strong>📞 Contacto:</strong> 986 173 031</p>
+        </div>
+      </div>
+      <div class="maps-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2953.5385567784!2d-8.7259!3d42.2365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f626c95403063%3A0x6334f593b4a456!2sR%C3%BAa%20Marqu%C3%A9s%20de%20Valladares%2C%203%2C%2036201%20Vigo%2C%20Pontevedra!5e0!3m2!1ses!2ses!4v1700000000000" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
 
-      <p>Los mejores cafés y muy buena variedad de vinos, un servicio profesional y agradable, buen trato com el cliente y cercanía, recomiendo al 100%</p>
-    </div>
-
-    <!-- Reseña 3 -->
-    <div class="item">
-      <h1>Paola Bagliani</h1>
-      <div class="reseña_estrellas">
-  ★★★★★
-</div>
-
-      <p>Lugar super ameno, de gran belleza estética y con unos productos exclusivos: delicatessen, café de especialidad, molido en el acto. Puedes escoger tu vino, guiado magistralmente por Sebastián, prestigioso sommelier y reconocido barista. Ideal para una copa o un café delicioso take away!!</p>
-    </div>
-
-    <!-- Reseña 4 -->
-    <div class="item">
-      <h1>WILL Diaz</h1>
-      <div class="reseña_estrellas">
-  ★★★★★
-</div>
-
-      <p>Muy buen café natural, recomendado!se siente la diferencia en el tostado y el sabor.</p>
-    </div>
-
-    <!-- Reseña 5 -->
-    <div class="item">
-      <h1>Paco Miralles</h1>
-      <div class="reseña_estrellas">
-  ★★★★★
-</div>
-
-      <p>El mejor lugar para llevarte un café de especialidad. Se ha convertido en mi tienda habitual.</p>
-    </div>
-
-  </div>
-
-  <button class="flecha derecha" onclick="moverCarrusel(1)">&#10095;</button>
-</section>
-
-
-  <section id="horarios" class="horarios" style="margin-top: 8rem;">
-    <div class="info" style="margin: 1rem;">
-      <h1 style="font-size: 2rem; margin-bottom: 1rem;">Información</h1>
-      <p style="font-size: .80rem;">🕒 Lunes a Viernes:8:30 - 14:00 | 17:00 - 20:30 <br>🕒 Sábados:9:30 - 14:00 | 17:30 - 20:30 <br>📍 Rúa do Marqués de Valladares, 3, 36201 Vigo, Pontevedra <br>📞986 173 031</p>
-    </div>
-
-    <div style="margin-top: 2rem" class="maps">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.725282147062!2d-8.726938023835785!3d42.23840597120448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2f635f9f566db9%3A0xf4e41ba0c53ce3e3!2sSabor%20Maestro%20Tienda%20Specialty%20Coffee%20%26%20Wine%20Store!5e1!3m2!1ses!2ses!4v1764965934788!5m2!1ses!2ses"
-        height="450"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        width="400"
-        height="300"
-      ></iframe>
-    </div>
-  </div>
-  </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <section id="contacto" class="contacto-section">
-    <h2>Contáctanos</h2>
+  <footer class="contacto-section">
+    <h2>Síguenos en redes</h2>
     <div class="contacto-icons">
-      <a href="" target="_blank"><i class="fab fa-whatsapp"></i></a>
-      <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="" target="_blank" rel="noopener">
-        <i class="fas fa-envelope"></i>
-      </a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fas fa-envelope"></i></a>
     </div>
-  </section>
+  </footer>
 
-  <script>
-let indice = 0;
+<script>
+    let indice = 0;
+    function moverCarrusel(direccion) {
+      const carrusel = document.querySelector(".contenedor-carrusel");
+      const items = document.querySelectorAll(".item");
+      indice = (indice + direccion + items.length) % items.length;
+      carrusel.style.transform = `translateX(-${indice * 100}%)`;
+    }
 
-function moverCarrusel(direccion) {
-  const carrusel = document.querySelector(".contenedor-carrusel");
-  const items = document.querySelectorAll(".item");
-  const total = items.length;
-
-  indice += direccion;
-
-  if (indice < 0) indice = total - 1;
-  if (indice >= total) indice = 0;
-
-  carrusel.style.transform = `translateX(-${indice * 100}%)`;
-}
-</script>
-
-
-  <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
+    hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
   </script>
-
 </body>
-
 </html>
