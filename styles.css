@@ -429,4 +429,19 @@ body {
 
   .split-section { grid-template-columns: 1fr; }
   .hero-forest h1 { font-size: 2.2rem; }
+
+  .carrusel {
+    width: 90% !important; /* Fuerza el ancho al 90% en móviles */
+    margin: 0 auto;        /* Lo mantiene centrado */
+  }
+
+  .item {
+    padding: 15px;         /* Reduce un poco el padding interno para ganar espacio */
+  }
+  
+  .flecha {
+    width: 35px;           /* Opcional: reduce un poco las flechas en móvil */
+    height: 35px;
+    font-size: 18px;
+  }
 }
