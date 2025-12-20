@@ -23,7 +23,7 @@ body {
    HEADER UNIFICADO ESTILO LIMPIO
    ========================================= */
 .header {
-  background-image: url("/img/madera_grande.jpg");
+  background-image: url("/img/madera_grande");
   background-size: cover;
   background-position: center;
   height: 90px;
